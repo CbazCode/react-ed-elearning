@@ -8,6 +8,12 @@ export const Header = () => {
   const toggleMenu = () => {
     menu.current.classList.toggle("show")
   }
+
+  const removeToken = () => {
+    localStorage.removeItem('token')
+    window.location = "/login"
+  }
+  
   return (
     <header className="main-header">
         <div className="ed-grid s-grid-5 lg-grid-4">
@@ -27,12 +33,14 @@ export const Header = () => {
                 <li><NavLink to = "/especialidades">Especialidades</NavLink></li>
                 <li><NavLink to = "/cursos">Cursos</NavLink></li>
                 <li><NavLink to = "/profesores">Profesores</NavLink></li>
+                <li><span onClick={() => removeToken()}>Cerrar Sesión</span></li>
               </ul>
             </nav>
             <div 
               className = "main-menu-toggle to-l"
               onClick = {() => toggleMenu()}
               ></div>
+            
           </div>
         </div>
     </header>
