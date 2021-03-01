@@ -7,6 +7,6 @@ export const PublicRoutes = ({ component: Component, ...rest}) => {
     return <Redirect to = "/"/>
   }
   return (
-    <Route {...rest} render = { Component }/>
+    <Route {...rest} component = { Component }/>
   )
 }

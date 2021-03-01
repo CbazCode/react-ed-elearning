@@ -4,19 +4,20 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-import { Header } from '../components/Organisms/Header'
-import { Classes } from '../components/pages/Classes'
-import { Course } from '../components/pages/Course'
-import { Courses } from '../components/pages/Courses'
-import { Home } from '../components/pages/Home'
-import { Login } from '../components/pages/Login'
-import { Page404 } from '../components/pages/Page404'
-import { Register } from '../components/pages/Register'
-import { Specialities } from '../components/pages/Specialities'
-import { Speciality } from '../components/pages/Speciality'
-import { Teachers } from '../components/pages/Teachers'
-import { PrivateRoutes } from './PrivateRoutes'
-import { PublicRoutes } from './PublicRoutes'
+import { Header } from '../components/Organisms/Header.js'
+import { Classes } from '../components/pages/Classes.js'
+import { Course } from '../components/pages/Course.js'
+import { Courses } from '../components/pages/Courses.js'
+import { Home } from '../components/pages/Home.js'
+import { Login } from '../components/pages/Login.js'
+import { Page404 } from '../components/pages/Page404.js'
+import { Register } from '../components/pages/Register.js'
+import { Specialities } from '../components/pages/Specialities.js'
+import { Speciality } from '../components/pages/Speciality.js'
+import { Teachers } from '../components/pages/Teachers.js'
+
+import { PrivateRoutes } from './PrivateRoutes.js'
+import { PublicRoutes } from './PublicRoutes.js'
 
 
 export const AppRouter = () => {
