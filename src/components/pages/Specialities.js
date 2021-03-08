@@ -3,8 +3,11 @@ import Banner from '../Organisms/Banner'
 import img from '../../img/specialities.png'
 import { startGetAllSpeacialities } from '../../redux/actions/actionCreators';
 import { store } from '../../redux/store'
+import { Card } from '../Organisms/Card';
+import { useSelector } from 'react-redux';
 
 export const Specialities = () => {
+  const {specialities} = useSelector( state => state.speciality );
   useEffect(() => {
     store.dispatch(startGetAllSpeacialities())
   }, [])
@@ -20,7 +23,7 @@ export const Specialities = () => {
         title="Especialidades"
         subtitle="Domina un tecnología con las rutas de aprendizaje que te ofrecemos"
       />
-      {/* {
+      {
         specialities &&
         <main className="ed-grid m-grid-3">
           {
@@ -34,7 +37,7 @@ export const Specialities = () => {
             ))
           }
         </main>
-      } */}
+      }
     </>
   )
 }

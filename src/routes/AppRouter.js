@@ -26,12 +26,12 @@ export const AppRouter = () => {
       <Header/>
       <div>
         <Switch>
-          <PrivateRoutes path = "/especialidades" component = {Specialities}/>
-          <PrivateRoutes path = "/especialidades/:id" component = {Speciality}/>
-          <PrivateRoutes path = "/cursos" component = {Courses}/>
-          <PrivateRoutes path = "/cursos/:id" component = {Course}/>
-          <PrivateRoutes path = "/profesores" component = {Teachers}/>
-          <PrivateRoutes path = "/clase/:id" component = {Classes}/>
+          <PrivateRoutes exact path = "/especialidades" component = {Specialities}/>
+          <PrivateRoutes exact path = "/especialidades/:id" component = {Speciality}/>
+          <PrivateRoutes exact path = "/cursos" component = {Courses}/>
+          <PrivateRoutes exact path = "/cursos/:id" component = {Course}/>
+          <PrivateRoutes exact path = "/profesores" component = {Teachers}/>
+          <PrivateRoutes exact path = "/clase/:id" component = {Classes}/>
           <PrivateRoutes exact path = "/" component = {Home}/>
 
           <PublicRoutes path="/login" exact component = {Login}/>
