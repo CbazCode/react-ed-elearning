@@ -1,9 +1,40 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Banner from '../Organisms/Banner'
+import img from '../../img/specialities.png'
+import { startGetAllSpeacialities } from '../../redux/actions/actionCreators';
+import { store } from '../../redux/store'
 
 export const Specialities = () => {
+  useEffect(() => {
+    store.dispatch(startGetAllSpeacialities())
+  }, [])
+
   return (
-    <div className = "ed-grid">
-      <h1>Specialities</h1>
-    </div>
+    <>
+      <Banner
+        color="first-color"
+        image={{
+          src: img,
+          alt: "Banner Especialidades"
+        }}
+        title="Especialidades"
+        subtitle="Domina un tecnología con las rutas de aprendizaje que te ofrecemos"
+      />
+      {/* {
+        specialities &&
+        <main className="ed-grid m-grid-3">
+          {
+            specialities.map(s => (
+              <Card
+              path="especialidades"
+              picture={s.picture}
+              name={s.name}
+              key={s.id}
+              card={s.id}/>
+            ))
+          }
+        </main>
+      } */}
+    </>
   )
 }

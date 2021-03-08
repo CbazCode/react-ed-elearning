@@ -1,11 +1,41 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { getAllCourses } from '../../redux/actions/actionCreators'
+import { store } from '../../redux/store'
+import img from '../../img/courses.jpg'
+import Banner from '../Organisms/Banner'
 
 export const Courses = () => {
-  const [prueba, setPrueba] = useState(3)
+  useEffect(() => {
+    store.dispatch(getAllCourses())
+  }, [])
+
   return (
-    <div className = "ed-grid">
-      <h1>Courses</h1>
-      <p>{prueba}</p>
-    </div>
+    <>
+      <Banner
+        color="dark-color"
+        image={{
+          src: img,
+          alt: "Banner Especialidades"
+        }}
+        title="Nuestros cursos"
+        subtitle="Comienza desde cero hoy mismo en tu camino a dominar la tecnología"
+      />
+      {/* {
+        courses &&
+        <main className="ed-grid m-grid-5">
+          {
+            courses.map(c => (
+              <Card
+                path="cursos"
+                picture={c.picture}
+                name={c.name}
+                key={c.id}
+                card={c.id}
+              />
+            ))
+          }
+        </main>
+      } */}
+    </>
   )
 }
