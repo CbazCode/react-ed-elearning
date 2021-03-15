@@ -15,6 +15,7 @@ import { Register } from '../components/pages/Register.js'
 import { Specialities } from '../components/pages/Specialities.js'
 import { Speciality } from '../components/pages/Speciality.js'
 import { Teachers } from '../components/pages/Teachers.js'
+import ScrollToTop from '../helpers/ScrollToTop.js'
 
 import { PrivateRoutes } from './PrivateRoutes.js'
 import { PublicRoutes } from './PublicRoutes.js'
@@ -23,6 +24,7 @@ import { PublicRoutes } from './PublicRoutes.js'
 export const AppRouter = () => {
   return (
     <Router>
+      <ScrollToTop/>
       <Header/>
       <div>
         <Switch>

@@ -11,7 +11,7 @@ const Banner = ({ color, image, title, subtitle, home, poster, courseBanner, esp
           alt={image.alt}
           className="main-banner__img"
         />
-        {/* {
+        {
           home ?
           <div className="ed-grid m-grid-2">
             <div className="main-banner__data">
@@ -19,7 +19,7 @@ const Banner = ({ color, image, title, subtitle, home, poster, courseBanner, esp
               <p>{subtitle}</p>
               <Link to="/cursos" className="button second-color">Ver cursos</Link>
             </div>
-            <div className="img-container s-ratio-16-9">
+            <div className="img-container s-ratio-16-9" style = {{borderRadius: '25px'}}>
               <img src={poster} alt="Curso actual"/>
             </div>
           </div>
@@ -39,12 +39,12 @@ const Banner = ({ color, image, title, subtitle, home, poster, courseBanner, esp
                 <img src={poster} alt="Curso actual"/>
               </div>
             </div>
-            : */}
+            :
             <div className="main-banner__data s-center">
               <h1 className="main-banner__title">{title}</h1>
               <p>{subtitle}</p>
             </div>
-        {/* } */}
+         } 
       </div>
     </div>
   </div>

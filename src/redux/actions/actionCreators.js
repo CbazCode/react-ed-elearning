@@ -52,7 +52,7 @@ const getAllSpecialities = ( specialities ) =>{
 
 export const startGetSpeaciality = (id) => {
   return async(dispatch) => {
-    const speciality = await axiosGetWithID('especialidades', id);
+    const speciality = await axiosGetWithID('especialidad', id);
     dispatch(getSpeciality(speciality));
   }
 }
@@ -91,7 +91,7 @@ export const getAllCourses = () => {
     
 export const getCourse = (id) => {
     return (dispatch) => {
-      Axios.get(`${process.env.REACT_APP_API_URL}/cursos/${id}`)
+      Axios.get(`${process.env.REACT_APP_API_URL}/curso/${id}`)
         .then( resp => {
           return dispatch({
             type: types.GET_COURSE,

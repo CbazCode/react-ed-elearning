@@ -13,7 +13,7 @@ const PrivateMenu = () => {
       <li><NavLink to="/especialidades">Especialidades</NavLink></li>
       <li><NavLink to="/cursos">Cursos</NavLink></li>
       <li><NavLink to="/profesores">Profesores</NavLink></li>
-      <li><span onClick={() => removeToken()}>Cerrar Sesión</span></li>
+      <li><span onClick={() => removeToken()} style = {{cursor: 'pointer'}}>Cerrar Sesión</span></li>
     </ul>
   )
 }
